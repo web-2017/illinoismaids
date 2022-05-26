@@ -15,10 +15,11 @@ import AdbIcon from '@mui/icons-material/Adb'
 import PropTypes from 'prop-types'
 import SanitizerIcon from '@mui/icons-material/Sanitizer'
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices'
+import Link from '@mui/material/Link'
 
-import { BRAND_NAME } from '../utils/constants'
+import { BRAND_NAME, PHONE } from '../utils/constants'
 
-const pages = ['Services', 'Pricing', 'Extras', 'CONTACT']
+const pages = ['Services', 'Pricing', 'Extras', 'contact', 'book now']
 
 const AppBarComponent = () => {
 	const [anchorElNav, setAnchorElNav] = useState(null)
@@ -115,6 +116,15 @@ const AppBarComponent = () => {
 								{page}
 							</Button>
 						))}
+					</Box>
+					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+						<Box sx={{ flexGrow: 1 }} />
+						<Typography textAlign='center'>
+							{' '}
+							<Link href={`tel:${PHONE}`} color='#fff' underline='none'>
+								{PHONE}
+							</Link>
+						</Typography>
 					</Box>
 				</Toolbar>
 			</Container>

@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography'
 
 import bg from '../images/2.jpg'
 import { PHONE } from '../utils/constants'
+import { BookBtn } from './BookBtn'
 
 const StyledBackground = styled(Container, {
 	name: 'StyledBackground',
@@ -29,6 +30,7 @@ export const Hero = () => {
 			}}>
 			<Container maxWidth='sm'>
 				<Typography variant='h4'>Welcome to your ECO Home</Typography>
+				<BookBtn />
 			</Container>
 		</StyledBackground>
 	)
