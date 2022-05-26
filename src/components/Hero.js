@@ -3,7 +3,7 @@ import { Box, Container } from '@material-ui/core'
 import { styled } from '@mui/system'
 import Typography from '@mui/material/Typography'
 
-import bg from '../images/2.jpg'
+import bgHero from '../images/hero.jpg'
 import { PHONE } from '../utils/constants'
 import { BookBtn } from './BookBtn'
 
@@ -15,7 +15,7 @@ const StyledBackground = styled(Container, {
 	marginTop: '50px',
 	padding: '25px',
 	height: '500px',
-	background: `url(${bg})`,
+	background: `url(${bgHero})`,
 	backgroundRepeat: 'no-repeat',
 	backgroundSize: '100% 100%',
 	backgroundAttachment: 'fixed',

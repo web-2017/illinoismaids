@@ -15,6 +15,7 @@ import { ScrollToTopButton } from './components/ScrollToTopButton'
 import Footer from './components/Footer'
 import MainTitle from './components/MainTitle'
 import { theme } from './utils/theme'
+import { extraData } from './data'
 
 export default function App() {
 	return (
@@ -38,7 +39,7 @@ export default function App() {
 							<MainTitle style={{ margin: '20px' }} title='Services' />
 							<Services />
 							<MainTitle style={{ margin: '40px' }} title='Extras' />
-							<Extras />
+							<Extras data={extraData} />
 						</main>
 						<MainTitle style={{ margin: '20px' }} title='Contact' />
 						<ContactUs />
