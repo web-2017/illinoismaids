@@ -13,6 +13,10 @@ import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
 import AdbIcon from '@mui/icons-material/Adb'
 import PropTypes from 'prop-types'
+import SanitizerIcon from '@mui/icons-material/Sanitizer'
+import CleaningServicesIcon from '@mui/icons-material/CleaningServices'
+
+import { BRAND_NAME } from '../utils/constants'
 
 const pages = ['Services', 'Pricing', 'Extras', 'CONTACT']
 
@@ -31,7 +35,9 @@ const AppBarComponent = () => {
 		<AppBar position='fixed'>
 			<Container maxWidth='xl'>
 				<Toolbar disableGutters>
-					<AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+					{/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+					 */}
+					<SanitizerIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 					<Typography
 						variant='h6'
 						noWrap
@@ -46,7 +52,7 @@ const AppBarComponent = () => {
 							color: 'inherit',
 							textDecoration: 'none',
 						}}>
-						LOGO
+						{BRAND_NAME}
 					</Typography>
 
 					<Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -83,7 +89,9 @@ const AppBarComponent = () => {
 							))}
 						</Menu>
 					</Box>
-					<AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+					{/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
+
+					<CleaningServicesIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
 					<Typography
 						variant='h5'
 						noWrap
