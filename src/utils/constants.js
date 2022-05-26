@@ -1,3 +1,4 @@
+export const BRAND_NAME = 'Cleaning maids service'
 export const PHONE = '+1 847 312 5422'
 export const ADDRESS = 'Park Ridge / Edison Park / Norwood Park / Morton Grove / Niles / Norridge / Rosemont'
 
