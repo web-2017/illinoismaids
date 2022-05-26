@@ -85,16 +85,16 @@ export default function ContactUs() {
 							spacing={2}
 							md={8}
 							item={true}>
-							<Grid item sm={12} md={4}>
+							<Grid item xs={12} sm={6} md={4}>
 								<TextField label='Name' value={name} onChange={(e) => setName(e.target.value)} fullWidth />
 							</Grid>
-							<Grid item sm={12} md={4}>
+							<Grid item xs={12} sm={6} md={4}>
 								<TextField required label='Phone*' value={phone} onChange={(e) => setPhone(e.target.value)} fullWidth />
 							</Grid>
-							<Grid item sm={12} md={4}>
+							<Grid item xs={12} sm={6} md={4}>
 								<TextField required label='Email*' value={email} onChange={(e) => setEmail(e.target.value)} fullWidth />
 							</Grid>
-							<Grid item md={4} sm={12}>
+							<Grid item md={4} xs={12} sm={6}>
 								{/* <div>{value.toLocaleDateString()}</div> */}
 								<DatePicker
 									label='Choose date'
@@ -105,7 +105,7 @@ export default function ContactUs() {
 									renderInput={(params) => <TextField fullWidth {...params} />}
 								/>
 							</Grid>
-							<Grid item sm={12} md={4}>
+							<Grid item xs={12} sm={6} md={4}>
 								<TimePicker
 									label='Time'
 									value={time}
@@ -116,7 +116,7 @@ export default function ContactUs() {
 									renderInput={(params) => <TextField fullWidth {...params} />}
 								/>
 							</Grid>
-							<Grid item sm={12} md={4}>
+							<Grid item xs={12} sm={6} md={4}>
 								<TextField
 									required
 									label='Address'
@@ -125,7 +125,7 @@ export default function ContactUs() {
 									fullWidth
 								/>
 							</Grid>
-							<Grid item sm={12}>
+							<Grid item xs={12}>
 								<TextField
 									multiline
 									rows={4}
@@ -139,7 +139,7 @@ export default function ContactUs() {
 									}}
 								/>
 							</Grid>
-							<Grid style={{ marginTop: '20px' }} container sm={12} justifyContent='center'>
+							<Grid style={{ marginTop: '20px' }} container xs={12} justifyContent='center'>
 								<Button onClick={(e) => sendEmail(e)} variant='outlined'>
 									Send
 								</Button>

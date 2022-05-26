@@ -9,7 +9,7 @@ import bg from '../../images/2.jpg'
 export default function ExtrasItem() {
 	return (
 		<>
-			<Grid item xs={12} md={4} className='itemService'>
+			<Grid item xs={12} sm={6} md={4} className='itemService'>
 				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<Typography variant='h5'>Refrigerator</Typography>
 				<img src={bg} alt='' style={{ width: '100%', height: '200px' }} />
@@ -18,7 +18,7 @@ export default function ExtrasItem() {
 					doloribus commodi rerum libero, officia iure.
 				</Typography>
 			</Grid>
-			<Grid item xs={12} md={4} className='itemService'>
+			<Grid item xs={12} sm={6} md={4} className='itemService'>
 				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<Typography variant='h5'>Refrigerator</Typography>
 				<img src={bg} alt='' style={{ width: '100%', height: '200px' }} />
@@ -27,7 +27,7 @@ export default function ExtrasItem() {
 					doloribus commodi rerum libero, officia iure.
 				</Typography>
 			</Grid>
-			<Grid item xs={12} md={4} className='itemService'>
+			<Grid item xs={12} sm={6} md={4} className='itemService'>
 				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<Typography variant='h5'>Refrigerator</Typography>
 				<img src={bg} alt='' style={{ width: '100%', height: '200px' }} />
