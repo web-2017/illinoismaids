@@ -11,38 +11,52 @@ import emailjs from '@emailjs/browser'
 import { PHONE, ADDRESS, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '../utils/constants'
 
 export default function ContactUs() {
-	const [value, setValue] = useState(new Date())
-	const [time, setTime] = useState('')
+	const [value, setValue] = useState(null)
+	const [time, setTime] = useState(null)
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
 	const [phone, setPhone] = useState('')
 	const [message, setMessage] = useState('')
+	const [address, setAddress] = useState('')
 	const form = useRef()
+	useEffect(() => {
+		setTime('')
+		setValue('')
+	}, [])
 
 	const sendEmail = (e) => {
 		e.preventDefault()
 
-		if (!name || !email || !phone) {
+		if (!email || !phone || !message) {
 			return
 		} else {
 			const fieldsData = {
-				data: value.toDateString(),
-				time: time.toLocaleTimeString(),
+				date: value?.toDateString(),
+				time: time?.toLocaleTimeString(),
 				name,
 				email,
+				address,
 				phone,
 				message,
 			}
-			console.log(fieldsData)
+
 			emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, fieldsData, EMAILJS_PUBLIC_KEY).then(
 				(result) => {
-					console.log('emailjs result', result)
-					console.log('emailjs', result.text)
-					setValue('')
-					setName('')
-					setPhone('')
-					setTime('')
-					setMessage('')
+					// console.log('emailjs result', result)
+					// console.log('emailjs', result.text)
+
+					if (result.status === 200) {
+						alert('Success, See you soon')
+						setValue(null)
+						setName('')
+						setEmail('')
+						setPhone('')
+						setTime(null)
+						setMessage('')
+						setAddress('')
+					} else {
+						alert('Oops, something was wrong! please try again or call me')
+					}
 				},
 				(error) => {
 					console.log(error.text)
@@ -75,12 +89,12 @@ export default function ContactUs() {
 								<TextField label='Name' value={name} onChange={(e) => setName(e.target.value)} fullWidth />
 							</Grid>
 							<Grid item sm={12} md={4}>
-								<TextField label='Phone' value={phone} onChange={(e) => setPhone(e.target.value)} fullWidth />
+								<TextField required label='Phone*' value={phone} onChange={(e) => setPhone(e.target.value)} fullWidth />
 							</Grid>
 							<Grid item sm={12} md={4}>
-								<TextField label='Email' value={email} onChange={(e) => setEmail(e.target.value)} fullWidth />
+								<TextField required label='Email*' value={email} onChange={(e) => setEmail(e.target.value)} fullWidth />
 							</Grid>
-							<Grid item md={6} sm={12}>
+							<Grid item md={4} sm={12}>
 								{/* <div>{value.toLocaleDateString()}</div> */}
 								<DatePicker
 									label='Choose date'
@@ -91,7 +105,7 @@ export default function ContactUs() {
 									renderInput={(params) => <TextField fullWidth {...params} />}
 								/>
 							</Grid>
-							<Grid item sm={12} md={6}>
+							<Grid item sm={12} md={4}>
 								<TimePicker
 									label='Time'
 									value={time}
@@ -102,12 +116,22 @@ export default function ContactUs() {
 									renderInput={(params) => <TextField fullWidth {...params} />}
 								/>
 							</Grid>
+							<Grid item sm={12} md={4}>
+								<TextField
+									required
+									label='Address'
+									value={address}
+									onChange={(e) => setAddress(e.target.value)}
+									fullWidth
+								/>
+							</Grid>
 							<Grid item sm={12}>
 								<TextField
 									multiline
 									rows={4}
 									fullWidth
-									label='Message'
+									required
+									label='Message*'
 									value={message}
 									onChange={(e) => {
 										// console.log(newValue?.toLocaleTimeString())
