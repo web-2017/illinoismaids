@@ -15,11 +15,12 @@ import AdbIcon from '@mui/icons-material/Adb'
 import PropTypes from 'prop-types'
 import SanitizerIcon from '@mui/icons-material/Sanitizer'
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices'
-import Link from '@mui/material/Link'
+import { Link as RouterLink } from 'react-router-dom'
+import Link from '@material-ui/core/Link'
 
 import { BRAND_NAME, PHONE } from '../utils/constants'
 
-const pages = ['Services', 'Pricing', 'Extras', 'contact', 'book now']
+const pages = ['Services', 'Pricing', 'Extras', 'contact', 'book']
 
 const AppBarComponent = () => {
 	const [anchorElNav, setAnchorElNav] = useState(null)
@@ -83,11 +84,19 @@ const AppBarComponent = () => {
 							sx={{
 								display: { xs: 'block', md: 'none' },
 							}}>
-							{pages.map((page) => (
-								<MenuItem key={page} onClick={handleCloseNavMenu}>
-									<Typography textAlign='center'>{page}</Typography>
-								</MenuItem>
-							))}
+							{pages.map((page) => {
+								if (page.includes('book')) {
+									console.log(page)
+								}
+								return (
+									<MenuItem key={page} onClick={handleCloseNavMenu}>
+										{/* <Typography textAlign='center'>{page}</Typography> */}
+										<Link component={RouterLink} to={page}>
+											{page}
+										</Link>
+									</MenuItem>
+								)
+							})}
 						</Menu>
 					</Box>
 					{/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
@@ -112,7 +121,12 @@ const AppBarComponent = () => {
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 						{pages.map((page) => (
-							<Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, color: 'white', display: 'block' }}>
+							<Button
+								component={RouterLink}
+								to={page}
+								key={page}
+								onClick={handleCloseNavMenu}
+								sx={{ my: 2, color: 'white', display: 'block' }}>
 								{page}
 							</Button>
 						))}
@@ -120,8 +134,7 @@ const AppBarComponent = () => {
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 						<Box sx={{ flexGrow: 1 }} />
 						<Typography textAlign='center'>
-							{' '}
-							<Link href={`tel:${PHONE}`} color='#fff' underline='none'>
+							<Link href={`tel:${PHONE}`} style={{ color: '#fff' }} underline='none'>
 								{PHONE}
 							</Link>
 						</Typography>

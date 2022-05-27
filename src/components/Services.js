@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography'
 export const Services = () => {
 	return (
 		<Grid container spacing={2} style={{ margin: '10px' }}>
-			<Grid item xs={12} md={3} className='itemService'>
+			<Grid item={true} xs={12} md={3} className='itemService'>
 				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<KingBedOutlinedIcon fontSize='large' color='primary' />
 				<Typography variant='h5'>Living room</Typography>
@@ -24,7 +24,7 @@ export const Services = () => {
 				</ul>
 			</Grid>
 
-			<Grid item xs={12} md={3} className='itemService'>
+			<Grid item={true} xs={12} md={3} className='itemService'>
 				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<AirlineSeatIndividualSuiteOutlinedIcon fontSize='large' color='primary' />
 				<Typography variant='h5'>Bedroom</Typography>
@@ -42,7 +42,7 @@ export const Services = () => {
 					<li>Vacuum Carpets and Small Rugs</li>
 				</ul>
 			</Grid>
-			<Grid item xs={12} md={3} className='itemService'>
+			<Grid item={true} xs={12} md={3} className='itemService'>
 				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<BathtubIcon fontSize='large' color='primary' />
 				<Typography variant='h5'>Bathroom</Typography>
@@ -59,7 +59,7 @@ export const Services = () => {
 				</ul>
 			</Grid>
 
-			<Grid item xs={12} md={3} className='itemService'>
+			<Grid item={true} xs={12} md={3} className='itemService'>
 				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<Kitchen fontSize='large' color='primary' />
 				<Typography variant='h5'>Kitchen</Typography>

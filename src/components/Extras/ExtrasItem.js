@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography'
 export default function ExtrasItem({ post, index }) {
 	return (
 		<>
-			<Grid item xs={12} sm={6} md={4} className='itemService'>
+			<Grid item={true} xs={12} sm={6} md={4} className='itemService'>
 				<Typography style={{ fontSize: '1.5rem', paddingBottom: '10px' }} variant='h5'>
 					{post?.title} {post?.price}
 				</Typography>

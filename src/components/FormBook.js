@@ -10,7 +10,7 @@ import emailjs from '@emailjs/browser'
 
 import { PHONE, ADDRESS, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '../utils/constants'
 
-export default function ContactUs() {
+export default function FormBook() {
 	const [value, setValue] = useState(null)
 	const [time, setTime] = useState(null)
 	const [name, setName] = useState('')
@@ -19,10 +19,6 @@ export default function ContactUs() {
 	const [message, setMessage] = useState('')
 	const [address, setAddress] = useState('')
 	const form = useRef()
-	useEffect(() => {
-		setTime('')
-		setValue('')
-	}, [])
 
 	const sendEmail = (e) => {
 		e.preventDefault()
@@ -42,11 +38,7 @@ export default function ContactUs() {
 
 			emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, fieldsData, EMAILJS_PUBLIC_KEY).then(
 				(result) => {
-					// console.log('emailjs result', result)
-					// console.log('emailjs', result.text)
-
 					if (result.status === 200) {
-						alert('Success, See you soon')
 						setValue(null)
 						setName('')
 						setEmail('')
@@ -54,6 +46,7 @@ export default function ContactUs() {
 						setTime(null)
 						setMessage('')
 						setAddress('')
+						alert('Success, See you soon')
 					} else {
 						alert('Oops, something was wrong! please try again or call me')
 					}
@@ -77,24 +70,24 @@ export default function ContactUs() {
 			</Grid>
 			<LocalizationProvider dateAdapter={AdapterDateFns}>
 				<FormControl ref={form}>
-					<Grid container xs={12} item={true} justifyContent='center'>
+					<Grid container item={true} sm={12} justifyContent='center'>
 						<Grid
 							style={{ paddingTop: '50px', paddingBottom: '100px' }}
 							container
 							justifyContent='center'
 							spacing={2}
-							md={8}
-							item={true}>
-							<Grid item xs={12} sm={6} md={4}>
+							item={true}
+							md={8}>
+							<Grid item={true} xs={12} sm={6} md={4}>
 								<TextField label='Name' value={name} onChange={(e) => setName(e.target.value)} fullWidth />
 							</Grid>
-							<Grid item xs={12} sm={6} md={4}>
+							<Grid item={true} xs={12} sm={6} md={4}>
 								<TextField required label='Phone*' value={phone} onChange={(e) => setPhone(e.target.value)} fullWidth />
 							</Grid>
-							<Grid item xs={12} sm={6} md={4}>
+							<Grid item={true} xs={12} sm={6} md={4}>
 								<TextField required label='Email*' value={email} onChange={(e) => setEmail(e.target.value)} fullWidth />
 							</Grid>
-							<Grid item md={4} xs={12} sm={6}>
+							<Grid item={true} md={4} xs={12} sm={6}>
 								{/* <div>{value.toLocaleDateString()}</div> */}
 								<DatePicker
 									label='Choose date'
@@ -105,7 +98,7 @@ export default function ContactUs() {
 									renderInput={(params) => <TextField fullWidth {...params} />}
 								/>
 							</Grid>
-							<Grid item xs={12} sm={6} md={4}>
+							<Grid item={true} xs={12} sm={6} md={4}>
 								<TimePicker
 									label='Time'
 									value={time}
@@ -116,7 +109,7 @@ export default function ContactUs() {
 									renderInput={(params) => <TextField fullWidth {...params} />}
 								/>
 							</Grid>
-							<Grid item xs={12} sm={6} md={4}>
+							<Grid item={true} xs={12} sm={6} md={4}>
 								<TextField
 									required
 									label='Address'
@@ -125,7 +118,7 @@ export default function ContactUs() {
 									fullWidth
 								/>
 							</Grid>
-							<Grid item xs={12}>
+							<Grid item={true} xs={12}>
 								<TextField
 									multiline
 									rows={4}
@@ -139,7 +132,7 @@ export default function ContactUs() {
 									}}
 								/>
 							</Grid>
-							<Grid style={{ marginTop: '20px' }} container xs={12} justifyContent='center'>
+							<Grid style={{ marginTop: '20px' }} container item={true} xs={12} justifyContent='center'>
 								<Button onClick={(e) => sendEmail(e)} variant='outlined'>
 									Send
 								</Button>
