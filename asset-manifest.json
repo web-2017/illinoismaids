@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/illinoismaids/static/css/main.6d108176.css",
-    "main.js": "/illinoismaids/static/js/main.5f2c2ac6.js",
-    "static/media/hero.jpg": "/illinoismaids/static/media/hero.2527d36fc3274de5a652.jpg",
-    "static/media/refrigirator.jpg": "/illinoismaids/static/media/refrigirator.d2c6adbe67cc82473aab.jpg",
-    "static/media/deep-cleaning.jpg": "/illinoismaids/static/media/deep-cleaning.a232ea64656a46173548.jpg",
-    "static/media/oven.jpg": "/illinoismaids/static/media/oven.fa8e73059385fb8c1b79.jpg",
-    "static/media/sheet.jpg": "/illinoismaids/static/media/sheet.c817519be4e5b945d88c.jpg",
-    "static/media/basement.jpg": "/illinoismaids/static/media/basement.6ed762f07d77d6c915ed.jpg",
-    "static/media/loundary.jpg": "/illinoismaids/static/media/loundary.ca21419c3eeded16f5ed.jpg",
-    "index.html": "/illinoismaids/index.html",
-    "main.6d108176.css.map": "/illinoismaids/static/css/main.6d108176.css.map",
-    "main.5f2c2ac6.js.map": "/illinoismaids/static/js/main.5f2c2ac6.js.map"
+    "main.css": "/static/css/main.6d108176.css",
+    "main.js": "/static/js/main.96db2319.js",
+    "static/media/hero.jpg": "/static/media/hero.2527d36fc3274de5a652.jpg",
+    "static/media/refrigirator.jpg": "/static/media/refrigirator.d2c6adbe67cc82473aab.jpg",
+    "static/media/deep-cleaning.jpg": "/static/media/deep-cleaning.a232ea64656a46173548.jpg",
+    "static/media/oven.jpg": "/static/media/oven.fa8e73059385fb8c1b79.jpg",
+    "static/media/sheet.jpg": "/static/media/sheet.c817519be4e5b945d88c.jpg",
+    "static/media/basement.jpg": "/static/media/basement.6ed762f07d77d6c915ed.jpg",
+    "static/media/loundary.jpg": "/static/media/loundary.ca21419c3eeded16f5ed.jpg",
+    "index.html": "/index.html",
+    "main.6d108176.css.map": "/static/css/main.6d108176.css.map",
+    "main.96db2319.js.map": "/static/js/main.96db2319.js.map"
   },
   "entrypoints": [
     "static/css/main.6d108176.css",
-    "static/js/main.5f2c2ac6.js"
+    "static/js/main.96db2319.js"
   ]
 }
