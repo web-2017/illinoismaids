@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Grid, Button, Typography } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import emailjs from '@emailjs/browser'
+import { Link } from '@mui/material'
 
 import { PHONE, ADDRESS, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CONTACT_ID, EMAILJS_PUBLIC_KEY } from '../utils/constants'
 
@@ -49,7 +50,10 @@ export default function ContactForm() {
 		<>
 			<Grid container flexDirection='column' alignContent='center' justifyContent='center'>
 				<Typography style={{ textAlign: 'center' }} variant='h4'>
-					Call me today! {PHONE}
+					Call me today!
+				</Typography>
+				<Typography component={Link} href={`tel:${PHONE}`} style={{ textAlign: 'center' }} variant='h4'>
+					{PHONE}
 				</Typography>
 				<Typography style={{ textAlign: 'center' }} variant='h6'>
 					{ADDRESS}
