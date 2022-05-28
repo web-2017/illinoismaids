@@ -20,7 +20,7 @@ const StyledBackground = styled(Container, {
 	justifyContent: 'center',
 	display: 'flex',
 	alignItems: 'center',
-	['@media (max-width:500px)']: {
+	'@media (max-width:500px)': {
 		background: `url(${bgHero}) no-repeat top center fixed`,
 		height: '300px',
 	},
