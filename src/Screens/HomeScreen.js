@@ -9,6 +9,7 @@ import MainTitle from '../components/MainTitle'
 import MainContainer from '../components/MainContainer'
 import { extraData } from '../data'
 import { BookBtn } from '../components/BookBtn'
+import { ScrollToTopButton } from '../components/ScrollToTopButton'
 
 function HomeScreen() {
 	return (
@@ -29,6 +30,7 @@ function HomeScreen() {
 				<MainTitle style={{ margin: '20px' }} title='Contact' />
 				<ContactForm id='contact' />
 			</MainContainer>
+			<ScrollToTopButton id='#back-to-top-anchor' />
 		</>
 	)
 }

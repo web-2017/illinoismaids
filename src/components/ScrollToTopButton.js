@@ -27,7 +27,7 @@ export const ScrollToTopButton = ({ id }) => {
 
 	return (
 		<Zoom in={trigger}>
-			<Box onClick={handleClick} role='presentation' sx={{ position: 'fixed', bottom: 16, right: 16 }}>
+			<Box onClick={handleClick} role='presentation' sx={{ position: 'fixed', bottom: '20px', right: '20px' }}>
 				<Fab color='secondary' size='small' aria-label='scroll back to top'>
 					<KeyboardArrowUpIcon />
 				</Fab>

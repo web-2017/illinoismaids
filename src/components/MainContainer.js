@@ -3,7 +3,6 @@ import { Container, CssBaseline, Box } from '@mui/material'
 import Toolbar from '@mui/material/Toolbar'
 
 import AppBarComponent from './AppBarComponent'
-import { ScrollToTopButton } from './ScrollToTopButton'
 import Footer from './Footer'
 
 export default function MainContainer({ children }) {
@@ -21,7 +20,6 @@ export default function MainContainer({ children }) {
 					<AppBarComponent />
 					{children}
 				</Container>
-				<ScrollToTopButton id='#back-to-top-anchor' />
 			</Box>
 			<Footer />
 		</Box>

@@ -123,7 +123,7 @@ const AppBarComponent = () => {
 							color: 'inherit',
 							textDecoration: 'none',
 						}}>
-						LOGO
+						{BRAND_NAME}
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 						{pathname !== '/book' ? (
