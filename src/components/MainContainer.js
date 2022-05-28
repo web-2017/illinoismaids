@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, CssBaseline, Box, Paper } from '@mui/material'
+import { Container, CssBaseline, Box } from '@mui/material'
 import Toolbar from '@mui/material/Toolbar'
 
 import AppBarComponent from './AppBarComponent'

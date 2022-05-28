@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import HomeScreen from './Screens/HomeScreen'
 import BookScreen from './Screens/BookScreen'

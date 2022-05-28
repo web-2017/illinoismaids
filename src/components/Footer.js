@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Container, Typography, Link } from '@material-ui/core'
+import { Box, Container, Typography } from '@material-ui/core'
 import { BRAND_NAME } from '../utils/constants'
 
 export default function Footer() {

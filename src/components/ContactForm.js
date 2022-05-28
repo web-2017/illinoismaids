@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { Box, Grid, Button, Typography } from '@mui/material'
+import React, { useState } from 'react'
+import { Grid, Button, Typography } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import emailjs from '@emailjs/browser'
 
@@ -10,7 +10,6 @@ export default function ContactForm() {
 	const [email, setEmail] = useState('')
 	const [phone, setPhone] = useState('')
 	const [message, setMessage] = useState('')
-	const form = useRef()
 
 	const sendEmail = (e) => {
 		e.preventDefault()

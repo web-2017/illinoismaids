@@ -1,10 +1,9 @@
 import React from 'react'
-import { Box, Container } from '@material-ui/core'
+import { Container } from '@material-ui/core'
 import { styled } from '@mui/system'
 import Typography from '@mui/material/Typography'
 
 import bgHero from '../images/hero.jpg'
-import { PHONE } from '../utils/constants'
 import { BookBtn } from './BookBtn'
 
 const StyledBackground = styled(Container, {

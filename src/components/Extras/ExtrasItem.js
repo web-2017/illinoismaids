@@ -1,10 +1,9 @@
 import React from 'react'
 import { Grid } from '@material-ui/core'
-import { Apartment, BathtubIcon, Kitchen } from '@material-ui/icons'
 
 import Typography from '@mui/material/Typography'
 
-export default function ExtrasItem({ post, index }) {
+export default function ExtrasItem({ post }) {
 	return (
 		<>
 			<Grid item={true} xs={12} sm={6} md={4} className='itemService'>
