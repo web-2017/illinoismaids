@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Box, Grid, Button, Typography } from '@mui/material'
 import TextField from '@mui/material/TextField'
-import { FormControl } from '@mui/material'
 import emailjs from '@emailjs/browser'
 
 import { PHONE, ADDRESS, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CONTACT_ID, EMAILJS_PUBLIC_KEY } from '../utils/constants'
 
-export default function FeedbackForm() {
+export default function ContactForm() {
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
 	const [phone, setPhone] = useState('')
@@ -58,7 +57,7 @@ export default function FeedbackForm() {
 					{ADDRESS}
 				</Typography>
 			</Grid>
-			<Grid container sm={12} item={true} justifyContent='center'>
+			<Grid container sm={12} item={true} justifyContent='center' id='contact'>
 				<Grid
 					style={{ paddingTop: '50px', paddingBottom: '100px' }}
 					container

@@ -1,36 +1,33 @@
-import * as React from 'react'
-import { Container, CssBaseline, Box, Paper } from '@mui/material'
+import Divider from '@mui/material/Divider'
 
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
-import Toolbar from '@mui/material/Toolbar'
-
-import FeedbackForm from '../components/FeedbackForm'
+import ContactForm from '../components/ContactForm'
 import { Hero } from '../components/Hero'
 import { Services } from '../components/Services'
 import { Extras } from '../components/Extras/Extras'
 import DescriptionComponent from '../components/DescriptionComponent'
-
 import MainTitle from '../components/MainTitle'
 import MainContainer from '../components/MainContainer'
-
 import { extraData } from '../data'
+import { BookBtn } from '../components/BookBtn'
 
 function HomeScreen() {
 	return (
 		<>
 			<MainContainer>
-				<main>
-					{/* Hero unit */}
-					<Hero />
-
-					<DescriptionComponent />
-					<MainTitle style={{ margin: '20px' }} title='Services' />
-					<Services />
-					<MainTitle style={{ margin: '40px' }} title='Extras' />
-					<Extras data={extraData} />
-				</main>
+				{/* Hero unit */}
+				<Hero />
+				<DescriptionComponent />
+				<Divider style={{ marginTop: '20px', marginBottom: '20px' }} />
+				<MainTitle style={{ margin: '20px' }} title='Services' />
+				<Services />
+				<BookBtn justifyContent='center' />
+				<Divider style={{ marginTop: '20px', marginBottom: '20px' }} />
+				<MainTitle style={{ margin: '40px' }} title='Extras' />
+				<Extras data={extraData} />
+				<BookBtn justifyContent='center' style={{ margin: '30px' }} />
+				<Divider style={{ marginTop: '20px', marginBottom: '20px' }} />
 				<MainTitle style={{ margin: '20px' }} title='Contact' />
-				<FeedbackForm />
+				<ContactForm id='contact' />
 			</MainContainer>
 		</>
 	)

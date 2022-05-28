@@ -7,20 +7,17 @@ import Typography from '@mui/material/Typography'
 import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
-import Avatar from '@mui/material/Avatar'
 import Button from '@mui/material/Button'
-import Tooltip from '@mui/material/Tooltip'
 import MenuItem from '@mui/material/MenuItem'
-import AdbIcon from '@mui/icons-material/Adb'
-import PropTypes from 'prop-types'
 import SanitizerIcon from '@mui/icons-material/Sanitizer'
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices'
 import { Link as RouterLink } from 'react-router-dom'
 import Link from '@material-ui/core/Link'
 
 import { BRAND_NAME, PHONE } from '../utils/constants'
+import { scrollToElementById } from '../utils/scrollToElementById'
 
-const pages = ['Services', 'Pricing', 'Extras', 'contact', 'book']
+const pages = ['services', 'pricing', 'extras', 'contact']
 
 const AppBarComponent = () => {
 	const [anchorElNav, setAnchorElNav] = useState(null)
@@ -85,21 +82,16 @@ const AppBarComponent = () => {
 								display: { xs: 'block', md: 'none' },
 							}}>
 							{pages.map((page) => {
-								if (page.includes('book')) {
-									console.log(page)
-								}
 								return (
 									<MenuItem key={page} onClick={handleCloseNavMenu}>
-										{/* <Typography textAlign='center'>{page}</Typography> */}
-										<Link component={RouterLink} to={page}>
+										<Typography textAlign='center' onClick={() => scrollToElementById(page)}>
 											{page}
-										</Link>
+										</Typography>
 									</MenuItem>
 								)
 							})}
 						</Menu>
 					</Box>
-					{/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
 
 					<CleaningServicesIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
 					<Typography
@@ -122,14 +114,16 @@ const AppBarComponent = () => {
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 						{pages.map((page) => (
 							<Button
-								component={RouterLink}
-								to={page}
 								key={page}
-								onClick={handleCloseNavMenu}
+								onClick={() => scrollToElementById(page)}
 								sx={{ my: 2, color: 'white', display: 'block' }}>
 								{page}
 							</Button>
 						))}
+
+						<Button component={RouterLink} to={'/book'} sx={{ my: 2, color: 'white', display: 'block' }}>
+							book now
+						</Button>
 					</Box>
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 						<Box sx={{ flexGrow: 1 }} />
@@ -145,7 +139,3 @@ const AppBarComponent = () => {
 	)
 }
 export default AppBarComponent
-
-AppBarComponent.propTypes = {
-	children: PropTypes.func,
-}

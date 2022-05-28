@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Box, Grid, Button, Typography } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
@@ -9,6 +9,7 @@ import { FormControl } from '@mui/material'
 import emailjs from '@emailjs/browser'
 
 import { PHONE, ADDRESS, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '../utils/constants'
+import { BookBtn } from './BookBtn'
 
 export default function FormBook() {
 	const [value, setValue] = useState(null)
@@ -23,7 +24,7 @@ export default function FormBook() {
 	const sendEmail = (e) => {
 		e.preventDefault()
 
-		if (!email || !phone || !message) {
+		if (!email || !phone || !message || !value || !time) {
 			return
 		} else {
 			const fieldsData = {
@@ -59,7 +60,7 @@ export default function FormBook() {
 	}
 
 	return (
-		<>
+		<Box display='flex' flexDirection={'column'} justifyContent='center' alignItems='center' minHeight='100vh'>
 			<Grid container flexDirection='column' alignContent='center' justifyContent='center'>
 				<Typography style={{ textAlign: 'center' }} variant='h4'>
 					Call me today! {PHONE}
@@ -133,14 +134,12 @@ export default function FormBook() {
 								/>
 							</Grid>
 							<Grid style={{ marginTop: '20px' }} container item={true} xs={12} justifyContent='center'>
-								<Button onClick={(e) => sendEmail(e)} variant='outlined'>
-									Send
-								</Button>
+								<BookBtn onClick={(e) => sendEmail(e)}>Send</BookBtn>
 							</Grid>
 						</Grid>
 					</Grid>
 				</FormControl>
 			</LocalizationProvider>
-		</>
+		</Box>
 	)
 }

@@ -8,11 +8,11 @@ import Typography from '@mui/material/Typography'
 
 export const Services = () => {
 	return (
-		<Grid container spacing={2} style={{ margin: '10px' }}>
+		<Grid container spacing={2} style={{ margin: '10px' }} id='services'>
 			<Grid item={true} xs={12} md={3} className='itemService'>
 				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<KingBedOutlinedIcon fontSize='large' color='primary' />
-				<Typography variant='h5'>Living room</Typography>
+				<Typography variant='title'>Living room</Typography>
 				<ul style={{ textAlign: 'left' }}>
 					<li>Dust-Off Cobwebs</li>
 					<li>Dust Baseboards</li>
@@ -27,7 +27,7 @@ export const Services = () => {
 			<Grid item={true} xs={12} md={3} className='itemService'>
 				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<AirlineSeatIndividualSuiteOutlinedIcon fontSize='large' color='primary' />
-				<Typography variant='h5'>Bedroom</Typography>
+				<Typography variant='title'>Bedroom</Typography>
 				<ul style={{ textAlign: 'left' }}>
 					<li>Clean Glass Table Tops</li>
 					<li>Wet Wipe Wood Surfaces</li>
@@ -45,7 +45,7 @@ export const Services = () => {
 			<Grid item={true} xs={12} md={3} className='itemService'>
 				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<BathtubIcon fontSize='large' color='primary' />
-				<Typography variant='h5'>Bathroom</Typography>
+				<Typography variant='title'>Bathroom</Typography>
 				<ul style={{ textAlign: 'left', fontSize: '15px' }}>
 					<li>Scrub and Disinfect Sinks, toilets, bathtubs/showers</li>
 					<li>Wipe Down Countertops</li>
@@ -62,7 +62,7 @@ export const Services = () => {
 			<Grid item={true} xs={12} md={3} className='itemService'>
 				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<Kitchen fontSize='large' color='primary' />
-				<Typography variant='h5'>Kitchen</Typography>
+				<Typography variant='title'>Kitchen</Typography>
 				<ul style={{ textAlign: 'left' }}>
 					<li>Clean Inside Microwave</li>
 					<li>Wipe Down Countertops</li>

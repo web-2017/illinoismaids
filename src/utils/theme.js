@@ -3,7 +3,7 @@ export const theme = createTheme({
 	typography: {
 		fontFamily: ['-apple-system', 'Titillium Web', 'sans-serif'].join(','),
 		h5: {
-			fontSize: '2rem',
+			fontSize: '1.5rem',
 			fontFamily: ['Koulen', 'cursive'].join(','),
 		},
 		h4: {
@@ -11,7 +11,10 @@ export const theme = createTheme({
 			fontFamily: ['Grape Nuts', 'cursive'].join(','),
 			fontWeight: 'bold',
 		},
+		title: {
+			display: 'block',
+			fontSize: '1.5rem',
+			fontFamily: ['Pacifico', 'cursive'].join(','),
+		},
 	},
 })
-
-// font-family: 'Koulen', cursive;

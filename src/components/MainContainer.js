@@ -8,7 +8,7 @@ import Footer from './Footer'
 
 export default function MainContainer({ children }) {
 	return (
-		<Box sx={{ marginTop: { sm: '0', md: '20px' } }}>
+		<Box sx={{ marginTop: { xs: '0', md: '20px' } }}>
 			<Toolbar id='back-to-top-anchor' />
 			<Box
 				sx={{
@@ -21,7 +21,7 @@ export default function MainContainer({ children }) {
 					<AppBarComponent />
 					{children}
 				</Container>
-				<ScrollToTopButton />
+				<ScrollToTopButton id='#back-to-top-anchor' />
 			</Box>
 			<Footer />
 		</Box>

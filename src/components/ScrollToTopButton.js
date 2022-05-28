@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 import Fab from '@mui/material/Fab'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
 
-export const ScrollToTopButton = (props) => {
+export const ScrollToTopButton = ({ id }) => {
 	const handleClick = (event) => {
-		const anchor = (event.target.ownerDocument || document).querySelector('#back-to-top-anchor')
+		const anchor = (event.target.ownerDocument || document).querySelector(id)
 
 		if (anchor) {
 			anchor.scrollIntoView({
