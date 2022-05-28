@@ -2,7 +2,7 @@
 	"name": "clening_company",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://web-2017.github.io/illinoismaids",
+	"homepage": "https://illinoismaids",
 	"dependencies": {
 		"@date-io/date-fns": "^2.14.0",
 		"@date-io/dayjs": "^2.14.0",
