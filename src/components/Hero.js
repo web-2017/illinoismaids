@@ -15,7 +15,7 @@ const StyledBackground = styled(Container, {
 	marginTop: '50px',
 	padding: '25px',
 	height: '500px',
-	background: `url(${bgHero}) no-repeat top center fixed`,
+	background: `url(${bgHero}) no-repeat center center fixed`,
 	backgroundSize: 'contain',
 	justifyContent: 'center',
 	display: 'flex',

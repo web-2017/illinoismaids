@@ -13,7 +13,6 @@ export default function ContactForm() {
 
 	const sendEmail = (e) => {
 		e.preventDefault()
-
 		if (!email || !phone || !message) {
 			return
 		} else {
