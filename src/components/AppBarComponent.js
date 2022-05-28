@@ -33,7 +33,7 @@ const AppBarComponent = () => {
 	}
 
 	return (
-		<AppBar position='fixed'>
+		<AppBar position='fixed' color='success'>
 			<Container maxWidth='xl'>
 				<Toolbar disableGutters>
 					{/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

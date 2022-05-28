@@ -16,13 +16,13 @@ const StyledBackground = styled(Container, {
 	padding: '25px',
 	height: '500px',
 	background: `url(${bgHero}) no-repeat center center fixed`,
-	backgroundSize: 'contain',
+	backgroundSize: 'cover',
 	justifyContent: 'center',
 	display: 'flex',
 	alignItems: 'center',
 	'@media (max-width:500px)': {
 		background: `url(${bgHero}) no-repeat top center fixed`,
-		height: '300px',
+		height: '100%',
 	},
 })
 export const Hero = () => {
@@ -32,10 +32,17 @@ export const Hero = () => {
 				<Typography
 					variant='h4'
 					align='center'
-					sx={{ pb: 4 }}
-					style={{ color: '#fff', textShadow: ' 5px 4px 5px #000', fontSize: '2rem' }}>
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quo delectus, hic autem laborum nam aut
-					dolor impedit debitis asperiores?
+					sx={{ mb: 4, p: 5 }}
+					style={{
+						color: '#fff',
+						textShadow: ' 5px 4px 5px #000',
+						fontSize: '2rem',
+						background: '#ccc0',
+						boxShadow: '0px 0px 47px #cccccca6',
+						borderRadius: '8px',
+					}}>
+					Illinois maids is a green cleaning company using natural Cleaning tools. We give a personal touch to every
+					home, taking care of our customers' houses as if our own.
 				</Typography>
 				<BookBtn variant='contained' />
 			</Box>

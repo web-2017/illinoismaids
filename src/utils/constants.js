@@ -1,6 +1,7 @@
 export const BRAND_NAME = 'Illinois Maids'
 export const PHONE = '+1 847 312 5422'
-export const ADDRESS = 'Park Ridge / Edison Park / Norwood Park / Morton Grove / Niles / Norridge / Rosemont'
+export const ADDRESS =
+	'Park Ridge, Skokie/Linkolnwood, Evantson, Winnetka, Barrington, Shaumburg, Oak Brook, Norridge/Rosemont, Northside Chicago, Linkoln Park'
 
 export const EMAILJS_SERVICE_ID = 'service_2etjb4f'
 export const EMAILJS_TEMPLATE_ID = 'template_xja5pgn'

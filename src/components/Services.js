@@ -1,19 +1,19 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
+import { Grid, Box } from '@material-ui/core'
 import { Kitchen } from '@material-ui/icons'
 import BathtubIcon from '@mui/icons-material/Bathtub'
 import KingBedOutlinedIcon from '@material-ui/icons/KingBedOutlined'
 import AirlineSeatIndividualSuiteOutlinedIcon from '@material-ui/icons/AirlineSeatIndividualSuiteOutlined'
 import Typography from '@mui/material/Typography'
+import BusinessIcon from '@mui/icons-material/Business'
 
 export const Services = () => {
 	return (
-		<Grid container spacing={2} style={{ margin: '10px' }} id='services'>
+		<Grid container spacing={2} id='services'>
 			<Grid item={true} xs={12} md={3} className='itemService'>
-				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<KingBedOutlinedIcon fontSize='large' color='primary' />
 				<Typography variant='title'>Living room</Typography>
-				<ul style={{ textAlign: 'left' }}>
+				<ul style={{ textAlign: 'left', paddingLeft: '20px' }}>
 					<li>Dust-Off Cobwebs</li>
 					<li>Dust Baseboards</li>
 					<li>Empty Out Trash Can</li>
@@ -25,10 +25,9 @@ export const Services = () => {
 			</Grid>
 
 			<Grid item={true} xs={12} md={3} className='itemService'>
-				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<AirlineSeatIndividualSuiteOutlinedIcon fontSize='large' color='primary' />
 				<Typography variant='title'>Bedroom</Typography>
-				<ul style={{ textAlign: 'left' }}>
+				<ul style={{ textAlign: 'left', paddingLeft: '20px' }}>
 					<li>Clean Glass Table Tops</li>
 					<li>Wet Wipe Wood Surfaces</li>
 					<li>Empty Trash Cans</li>
@@ -43,10 +42,9 @@ export const Services = () => {
 				</ul>
 			</Grid>
 			<Grid item={true} xs={12} md={3} className='itemService'>
-				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<BathtubIcon fontSize='large' color='primary' />
 				<Typography variant='title'>Bathroom</Typography>
-				<ul style={{ textAlign: 'left', fontSize: '15px' }}>
+				<ul style={{ textAlign: 'left', paddingLeft: '20px', fontSize: '15px' }}>
 					<li>Scrub and Disinfect Sinks, toilets, bathtubs/showers</li>
 					<li>Wipe Down Countertops</li>
 					<li>Wipe Down the Outside of Bathroom Cabinets</li>
@@ -60,10 +58,9 @@ export const Services = () => {
 			</Grid>
 
 			<Grid item={true} xs={12} md={3} className='itemService'>
-				{/* <HomeIcon fontSize='small' color='primary' /> */}
 				<Kitchen fontSize='large' color='primary' />
 				<Typography variant='title'>Kitchen</Typography>
-				<ul style={{ textAlign: 'left' }}>
+				<ul style={{ textAlign: 'left', paddingLeft: '20px' }}>
 					<li>Clean Inside Microwave</li>
 					<li>Wipe Down Countertops</li>
 					<li>Wipe Down Outside of Appliances</li>
@@ -76,6 +73,19 @@ export const Services = () => {
 					<li>Vacuum and Mop Kitchen Floors</li>
 				</ul>
 			</Grid>
+			<Box
+				mt={3}
+				mb={5}
+				justifyContent='center'
+				sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '0 auto' }}>
+				<BusinessIcon fontSize='large' color='primary' style={{ margin: '10px 0' }} />
+				<Typography variant='title' pb={2}>
+					Office
+				</Typography>
+				<Typography variant='body1' align='center'>
+					We serve general office spaces and medical offices we always customize the services to your specific needs
+				</Typography>
+			</Box>
 		</Grid>
 	)
 }

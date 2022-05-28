@@ -88,7 +88,7 @@ export default function ContactForm() {
 						/>
 					</Grid>
 					<Grid style={{ marginTop: '20px' }} container xs={12} item={true} justifyContent='center'>
-						<Button onClick={(e) => sendEmail(e)} variant='outlined'>
+						<Button onClick={(e) => sendEmail(e)} variant='outlined' color='success'>
 							Send
 						</Button>
 					</Grid>
