@@ -15,19 +15,15 @@ const StyledBackground = styled(Container, {
 	marginTop: '50px',
 	padding: '25px',
 	height: '500px',
-	['@media (max-width:500px)']: {
-		// eslint-disable-line no-useless-computed-key
-		height: '300px',
-	},
 	background: `url(${bgHero}) no-repeat center center fixed`,
-	['@media (max-width:500px)']: {
-		// eslint-disable-line no-useless-computed-key
-		background: `url(${bgHero}) no-repeat top center fixed`,
-	},
 	backgroundSize: 'contain',
 	justifyContent: 'center',
 	display: 'flex',
 	alignItems: 'center',
+	['@media (max-width:500px)']: {
+		background: `url(${bgHero}) no-repeat top center fixed`,
+		height: '300px',
+	},
 })
 export const Hero = () => {
 	return (
