@@ -10,7 +10,6 @@ import MainContainer from '../components/MainContainer'
 import { extraData } from '../data'
 import { BookBtn } from '../components/BookBtn'
 import { ScrollToTopButton } from '../components/ScrollToTopButton'
-import PriceScreen from './PriceScreen'
 
 function HomeScreen() {
 	return (
@@ -22,10 +21,6 @@ function HomeScreen() {
 				<Divider style={{ marginTop: '20px', marginBottom: '20px' }} />
 				<MainTitle style={{ margin: '20px' }} title='Services' />
 				<Services />
-				<BookBtn justifyContent='center' />
-				<Divider style={{ marginTop: '20px', marginBottom: '20px' }} />
-				<MainTitle style={{ margin: '20px' }} title='Prices' />
-				<PriceScreen />
 				<BookBtn justifyContent='center' />
 				<Divider style={{ marginTop: '20px', marginBottom: '20px' }} />
 				<MainTitle style={{ margin: '40px' }} title='Extras' />

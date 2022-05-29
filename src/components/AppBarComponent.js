@@ -18,7 +18,7 @@ import { useLocation } from 'react-router-dom'
 import { BRAND_NAME, PHONE } from '../utils/constants'
 import { scrollToElementById } from '../utils/scrollToElementById'
 
-const pages = ['services', 'pricing', 'extras', 'contact']
+const pages = ['services', 'extras', 'contact']
 
 const AppBarComponent = () => {
 	const [anchorElNav, setAnchorElNav] = useState(null)

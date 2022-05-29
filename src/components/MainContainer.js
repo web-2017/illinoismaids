@@ -16,7 +16,7 @@ export default function MainContainer({ children }) {
 					minHeight: '100vh',
 				}}>
 				<CssBaseline />
-				<Container sx={{ paddingLeft: { xs: '5px' }, paddingRight: { xs: '5px' } }}>
+				<Container sx={{ paddingLeft: { xs: '10px' }, paddingRight: { xs: '10px' } }}>
 					<AppBarComponent />
 					{children}
 				</Container>
