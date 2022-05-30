@@ -13,10 +13,13 @@ import SanitizerIcon from '@mui/icons-material/Sanitizer'
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices'
 import { Link as RouterLink } from 'react-router-dom'
 import Link from '@material-ui/core/Link'
+import FacebookIcon from '@mui/icons-material/Facebook'
 import { useLocation } from 'react-router-dom'
 
 import { BRAND_NAME, PHONE } from '../utils/constants'
 import { scrollToElementById } from '../utils/scrollToElementById'
+import { Instagram } from '@material-ui/icons'
+import { ReactComponent as Yelp } from '../images/icons/yelp.svg'
 
 const pages = ['services', 'extras', 'contact']
 
@@ -149,6 +152,33 @@ const AppBarComponent = () => {
 					</Box>
 					<Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 						<Box sx={{ flexGrow: 1 }} />
+						<Typography textAlign='center' sx={{ mr: 1, ml: 1 }}>
+							<Link
+								href={'https://www.facebook.com/Illinoismaids'}
+								target='_blank'
+								style={{ color: '#fff' }}
+								underline='none'>
+								<FacebookIcon />
+							</Link>
+						</Typography>
+						<Typography textAlign='center' sx={{ mr: 1 }}>
+							<Link
+								href={'https://www.instagram.com/illinois_maids/'}
+								target='_blank'
+								style={{ color: '#fff' }}
+								underline='none'>
+								<Instagram />
+							</Link>
+						</Typography>
+						<Typography textAlign='center' sx={{ mr: 1 }}>
+							<Link
+								href={'https://www.yelp.com/biz/illinois-maids-chicago'}
+								target='_blank'
+								style={{ color: '#fff' }}
+								underline='none'>
+								<Yelp fill='#fff' style={{ width: '20px', height: '20px', color: '#fff' }} />
+							</Link>
+						</Typography>
 						<Typography textAlign='center'>
 							<Link href={`tel:${PHONE}`} style={{ color: '#fff' }} underline='none'>
 								{PHONE}

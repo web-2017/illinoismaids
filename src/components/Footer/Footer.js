@@ -1,6 +1,8 @@
 import React from 'react'
 import { Box, Container, Typography } from '@material-ui/core'
-import { BRAND_NAME } from '../utils/constants'
+
+import { BRAND_NAME } from '../../utils/constants'
+import FooterLinks from './FooterLinks'
 
 export default function Footer() {
 	const Copyright = () => {
@@ -22,12 +24,11 @@ export default function Footer() {
 				py: 3,
 				px: 2,
 				mt: 'auto',
-				backgroundColor: (theme) =>
-					theme.palette.mode === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
 			}}>
 			<Container maxWidth='sm'>
-				<Typography variant='body1'>We make your home Clean.</Typography>
-				<Copyright />
+				<FooterLinks />
+				<Typography variant='body1'>We make your place clean.</Typography>
+				<Copyright />{' '}
 			</Container>
 		</Box>
 	)
