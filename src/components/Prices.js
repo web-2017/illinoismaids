@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material'
-export default function PriceScreen() {
+export const Prices = () => {
 	return (
-		<Box id='services'>
+		<Box id='prices'>
 			<Typography variant='body1' mb={2}>
 				1 bed 1 bath - $83 1 bed 1.5 bath - $91 2 bed 1 bath - $99 2 bed 1.5 bath - $116 2 bed 2 bath - $124 2 bed 2.5
 				bath - $132 3 bed 1 bath - $116 3 bed 1.5 bath - $124 3 bed 2 bath - $132 3 bed 2.5 bath - $149 3 bed 3 bath -

@@ -1,9 +1,9 @@
 import React from 'react'
-import { Grid, Box } from '@material-ui/core'
-import { Kitchen } from '@material-ui/icons'
+import { Grid, Box } from '@mui/material'
+import { Kitchen } from '@mui/icons-material'
 import BathtubIcon from '@mui/icons-material/Bathtub'
-import KingBedOutlinedIcon from '@material-ui/icons/KingBedOutlined'
-import AirlineSeatIndividualSuiteOutlinedIcon from '@material-ui/icons/AirlineSeatIndividualSuiteOutlined'
+import KingBedOutlinedIcon from '@mui/icons-material/KingBedOutlined'
+import AirlineSeatIndividualSuiteOutlinedIcon from '@mui/icons-material/AirlineSeatIndividualSuiteOutlined'
 import Typography from '@mui/material/Typography'
 import BusinessIcon from '@mui/icons-material/Business'
 

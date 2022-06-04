@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '@material-ui/core'
+import { Container } from '@mui/material'
 import { Box } from '@mui/material'
 import { styled } from '@mui/system'
 import Typography from '@mui/material/Typography'

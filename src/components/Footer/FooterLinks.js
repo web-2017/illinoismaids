@@ -1,5 +1,5 @@
-import { Instagram } from '@material-ui/icons'
-import Link from '@material-ui/core/Link'
+import { Instagram } from '@mui/icons-material'
+import Link from '@mui/material/Link'
 import FacebookIcon from '@mui/icons-material/Facebook'
 
 import { ReactComponent as Yelp } from '../../images/icons/yelp.svg'

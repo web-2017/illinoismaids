@@ -10,13 +10,13 @@ import Button from '@mui/material/Button'
 import SanitizerIcon from '@mui/icons-material/Sanitizer'
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices'
 import { Link as RouterLink } from 'react-router-dom'
-import Link from '@material-ui/core/Link'
+import Link from '@mui/material/Link'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import { useLocation } from 'react-router-dom'
 
 import { BRAND_NAME, PHONE } from '../utils/constants'
 import { scrollToElementById } from '../utils/scrollToElementById'
-import { Instagram } from '@material-ui/icons'
+import InstagramIcon from '@mui/icons-material/Instagram'
 import { ReactComponent as Yelp } from '../images/icons/yelp.svg'
 import MobileMenu from './Menu/MobileMenu'
 
@@ -134,7 +134,7 @@ const AppBarComponent = () => {
 								target='_blank'
 								style={{ color: '#fff' }}
 								underline='none'>
-								<Instagram />
+								<InstagramIcon />
 							</Link>
 						</Typography>
 						<Typography textAlign='center' sx={{ mr: 1 }}>
