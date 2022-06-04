@@ -18,9 +18,9 @@ import { BRAND_NAME, PHONE } from '../utils/constants'
 import { scrollToElementById } from '../utils/scrollToElementById'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import { ReactComponent as Yelp } from '../images/icons/yelp.svg'
-import MobileMenu from './Menu/MobileMenu'
+import MobileMenu from './menu/MobileMenu'
 
-const pages = ['services', 'extras', 'prices', 'contact']
+const pages = ['services', 'extras', 'pricing', 'contact']
 
 const AppBarComponent = () => {
 	const [anchorElNav, setAnchorElNav] = useState(null)

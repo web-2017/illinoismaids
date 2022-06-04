@@ -3,14 +3,14 @@ import Divider from '@mui/material/Divider'
 import ContactForm from '../components/ContactForm'
 import { Hero } from '../components/Hero'
 import { Services } from '../components/Services'
-import { Extras } from '../components/Extras/Extras'
+import { Extras } from '../components/extras/Extras'
 import DescriptionComponent from '../components/DescriptionComponent'
 import MainTitle from '../components/MainTitle'
 import MainContainer from '../components/MainContainer'
 import { extraData } from '../data'
 import { BookBtn } from '../components/BookBtn'
 import { ScrollToTopButton } from '../components/ScrollToTopButton'
-import { Prices } from '../components/Prices'
+import { Prices } from '../components/price/Prices'
 
 function HomeScreen() {
 	return (

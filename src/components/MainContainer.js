@@ -3,7 +3,7 @@ import { Container, CssBaseline, Box } from '@mui/material'
 import Toolbar from '@mui/material/Toolbar'
 
 import AppBarComponent from './AppBarComponent'
-import Footer from './Footer/Footer'
+import Footer from './footer/Footer'
 
 export default function MainContainer({ children }) {
 	return (
