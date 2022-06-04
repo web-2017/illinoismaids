@@ -4,11 +4,9 @@ import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
-import Menu from '@mui/material/Menu'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
-import MenuItem from '@mui/material/MenuItem'
 import SanitizerIcon from '@mui/icons-material/Sanitizer'
 import CleaningServicesIcon from '@mui/icons-material/CleaningServices'
 import { Link as RouterLink } from 'react-router-dom'
@@ -20,6 +18,7 @@ import { BRAND_NAME, PHONE } from '../utils/constants'
 import { scrollToElementById } from '../utils/scrollToElementById'
 import { Instagram } from '@material-ui/icons'
 import { ReactComponent as Yelp } from '../images/icons/yelp.svg'
+import MobileMenu from './Menu/MobileMenu'
 
 const pages = ['services', 'extras', 'contact']
 
@@ -69,45 +68,13 @@ const AppBarComponent = () => {
 							color='inherit'>
 							<MenuIcon />
 						</IconButton>
-						<Menu
-							id='menu-appbar'
-							anchorEl={anchorElNav}
-							anchorOrigin={{
-								vertical: 'bottom',
-								horizontal: 'left',
-							}}
-							keepMounted
-							transformOrigin={{
-								vertical: 'top',
-								horizontal: 'left',
-							}}
-							open={Boolean(anchorElNav)}
-							onClose={handleCloseNavMenu}
-							sx={{
-								display: { xs: 'block', md: 'none' },
-							}}>
-							{pathname !== '/book' ? (
-								pages.map((page) => {
-									return (
-										<MenuItem key={page} onClick={handleCloseNavMenu}>
-											<Typography textAlign='center' onClick={() => scrollToElementById(page)}>
-												{page}
-											</Typography>
-										</MenuItem>
-									)
-								})
-							) : (
-								<MenuItem onClick={handleCloseNavMenu} component={RouterLink} to='/'>
-									<Typography textAlign='center'>Back to Home</Typography>
-								</MenuItem>
-							)}
 
-							{pathname !== '/book' && (
-								<MenuItem onClick={handleCloseNavMenu} component={RouterLink} to='/book'>
-									<Typography textAlign='center'>book now</Typography>
-								</MenuItem>
-							)}
-						</Menu>
+						<MobileMenu
+							pages={pages}
+							pathname={pathname}
+							anchorElNav={anchorElNav}
+							handleCloseNavMenu={handleCloseNavMenu}
+						/>
 					</Box>
 
 					<CleaningServicesIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
