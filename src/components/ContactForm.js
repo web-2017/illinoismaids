@@ -5,18 +5,21 @@ import emailjs from '@emailjs/browser'
 import { Link } from '@mui/material'
 
 import { PHONE, ADDRESS, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_CONTACT_ID, EMAILJS_PUBLIC_KEY } from '../utils/constants'
+import AlertComponent from './AlertComponent'
 
 export default function ContactForm() {
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
 	const [phone, setPhone] = useState('')
 	const [message, setMessage] = useState('')
-
+	const [open, setOpen] = useState(false)
 	const sendEmail = (e) => {
 		e.preventDefault()
 		if (!email || !phone || !message) {
+			setOpen(true)
 			return
 		} else {
+			setOpen(false)
 			const fieldsData = {
 				name,
 				email,
@@ -40,6 +43,7 @@ export default function ContactForm() {
 					}
 				},
 				(error) => {
+					setOpen(false)
 					console.log(error.text)
 				}
 			)
@@ -67,6 +71,7 @@ export default function ContactForm() {
 					spacing={2}
 					md={8}
 					item={true}>
+					{open && <AlertComponent setOpen={setOpen} title='Error' />}
 					<Grid item={true} xs={12} sm={6} md={6}>
 						<TextField label='Name' value={name} onChange={(e) => setName(e.target.value)} fullWidth />
 					</Grid>

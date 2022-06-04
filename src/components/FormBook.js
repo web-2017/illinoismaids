@@ -6,15 +6,11 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { TimePicker } from '@mui/x-date-pickers/TimePicker'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import { FormControl } from '@mui/material'
-import Alert from '@mui/material/Alert'
-import AlertTitle from '@mui/material/AlertTitle'
-import Stack from '@mui/material/Stack'
-import IconButton from '@mui/material/IconButton'
-import CloseIcon from '@mui/icons-material/Close'
 import emailjs from '@emailjs/browser'
 
 import { PHONE, ADDRESS, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from '../utils/constants'
 import { BookBtn } from './BookBtn'
+import AlertComponent from './AlertComponent'
 
 export default function FormBook() {
 	const [value, setValue] = useState(null)
@@ -80,26 +76,9 @@ export default function FormBook() {
 					{ADDRESS}
 				</Typography>
 			</Grid>
-			{open && (
-				<Stack sx={{ width: '100%' }} spacing={2}>
-					<Alert
-						severity='error'
-						action={
-							<IconButton
-								aria-label='close'
-								color='inherit'
-								size='small'
-								onClick={() => {
-									setOpen(false)
-								}}>
-								<CloseIcon fontSize='inherit' />
-							</IconButton>
-						}>
-						<AlertTitle>Error</AlertTitle>
-						All fields are required — <strong>check it out!</strong>
-					</Alert>
-				</Stack>
-			)}
+			<Grid container mt={2} sm={8}>
+				{open && <AlertComponent setOpen={setOpen} title='Error' />}
+			</Grid>
 			<LocalizationProvider dateAdapter={AdapterDateFns}>
 				<FormControl ref={form}>
 					<Grid container item={true} sm={12} justifyContent='center'>
