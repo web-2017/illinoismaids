@@ -1,15 +1,14 @@
-import { useState } from 'react'
 import { Box, Grid, Typography } from '@mui/material'
-import FormGroup from '@mui/material/FormGroup'
-import FormControlLabel from '@mui/material/FormControlLabel'
-import Switch from '@mui/material/Switch'
+// import FormGroup from '@mui/material/FormGroup'
+// import FormControlLabel from '@mui/material/FormControlLabel'
+// import Switch from '@mui/material/Switch'
 
 export const PriceCard = () => {
-	const label = { inputProps: { 'aria-label': 'Switch demo' } }
-	const [labelText, setLabelText] = useState('Weekly')
+	// const label = { inputProps: { 'aria-label': 'Switch demo' } }
+	// const [labelText, setLabelText] = useState('Weekly')
 	return (
 		<>
-			<Box sx={{ textAlign: 'center' }}>
+			{/* <Box sx={{ textAlign: 'center' }}>
 				<FormGroup>
 					<FormControlLabel
 						style={{ justifyContent: 'center' }}
@@ -18,12 +17,20 @@ export const PriceCard = () => {
 						onChange={(e) => setLabelText(e.target.checked ? 'Weekly' : 'Once')}
 					/>
 				</FormGroup>
+			</Box> */}
+
+			<Box mb={2}>
+				<Typography variant='body1' align='center'>
+					Valid for recurring bi-weekly cleanings Monthly Cleanings have an additional 15% fee Weekly Cleanings
+					Available with 10% Discount If you have heavily shedding pets, there will be an additional 15% charge. Move in
+					and move out cleanings as well as deep cleanings are 2.7 times the bi-weekly price
+				</Typography>
 			</Box>
 
 			<Grid container spacing={2} justifyContent='space-between'>
 				<Grid sm={12} md={2} item={true} sx={{ textAlign: 'center' }} p={1}>
 					<Typography variant='h4'>1 bed + 1 bath</Typography>
-					<Typography variant='h6'>From 80$</Typography>
+					<Typography variant='h6'>From 85$</Typography>
 				</Grid>
 				<Grid sm={12} md={2} item={true} sx={{ textAlign: 'center' }}>
 					<Typography variant='h4'>2 bed</Typography>
