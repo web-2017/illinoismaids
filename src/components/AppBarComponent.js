@@ -20,7 +20,7 @@ import { Instagram } from '@material-ui/icons'
 import { ReactComponent as Yelp } from '../images/icons/yelp.svg'
 import MobileMenu from './Menu/MobileMenu'
 
-const pages = ['services', 'extras', 'contact']
+const pages = ['services', 'extras', 'prices', 'contact']
 
 const AppBarComponent = () => {
 	const [anchorElNav, setAnchorElNav] = useState(null)
